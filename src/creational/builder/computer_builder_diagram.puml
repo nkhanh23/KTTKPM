@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Builder{
+    - String cpu,ram,storage,screen
+    + Builder buidCPU(String CPU)
+    + Builder buidRAM(String ram)
+    + Builder buidStorage(String storage)
+    + Builder buidScreen(String screen)
+    + Computer buid()
+
+}
+class Computer{
+    - String cpu,ram,storage,screen
+    - Computer(Builder b)
+
+}
+Builder ..> Computer
+@enduml

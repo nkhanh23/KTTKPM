@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class DataAcces{
+    - {static} DataAcces instance
+    - DataAcces()
+    + {static} DataAcces getInstance()
+    + void add(SanPham s)
+    + void inDS()
+}
+class SanPham
+
+DataAcces *--> SanPham: sps
+@enduml
