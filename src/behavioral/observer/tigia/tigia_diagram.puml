@@ -1,0 +1,19 @@
+@startuml
+class TiGia{
+'attach và detach là bắt buộc ở observer
+    + void attach(TiGiaListener) listener
+    + void detach(TiGiaListener) listener
+    + void notify(float delta)
+}
+abstract class NhaDauTu
+class NhaDauTuA
+class NhaDauTuB
+interface TiGiaListener{
+    void listen(float delta)
+}
+TiGia o--> TiGiaListener: listeners
+TiGiaListener <|.. NhaDauTu
+NhaDauTu --> TiGia : t
+NhaDauTu <|-- NhaDauTuA
+NhaDauTu <|-- NhaDauTuB
+@enduml

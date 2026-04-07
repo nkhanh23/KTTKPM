@@ -1,0 +1,30 @@
+@startuml
+interface Listener<T>{
+    + void listen(T t)
+}
+class MyStream<T>{
+    + void addListener(Listener<T> l)
+    + void addEvent(T t)
+}
+class Client<List<MonHoc>>{
+    +void onEvent(List<MonHoc> data)
+    +void hienThi(List<MonHoc> danhSach)
+}
+class MonHoc {
+    +String ten
+    +String soTC
+}
+class DataAccess {
+    - List<MonHoc> danhSachMonHoc
+    - Stream<List<MonHoc>> stream
+    + void them(MonHoc m)
+    + void xoa(MonHoc m)
+    + void capNhat(MonHoc m)
+    + Stream<List<MonHoc>> getStream()
+}
+MyStream o--> "*" Listener : quản lý danh sách
+Listener <|.. Client
+Client --> MyStream : stream
+
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface ButtonListener<T>{
+    + void onClick()
+}
+class MyButton<T>{
+    + void click()
+}
+class Activity{
+    - int count
+    + void onClick()
+}
+
+MyButton o--> "*" ButtonListener
+ButtonListener <|.. Activity
+Activity --> MyButton
+@enduml
