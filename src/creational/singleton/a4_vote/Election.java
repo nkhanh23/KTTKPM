@@ -16,7 +16,7 @@ public class Election {
         return instance;
     }
 
-    protected  void vote(Candidate c, String userId){
+    protected void vote(Candidate c, String userId){
         for(var id: votedUsers)
             if(id.equals(userId))
                 return;

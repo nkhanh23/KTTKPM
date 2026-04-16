@@ -22,6 +22,7 @@ public class Computer {
 
     public static class Builder{
         private String cpu, ram, storage,screen;
+
         Builder buildCPU(String cpu){
             this.cpu = cpu;
             return this;

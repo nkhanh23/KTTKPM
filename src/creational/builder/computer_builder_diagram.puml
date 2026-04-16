@@ -15,5 +15,6 @@ class Computer{
     - Computer(Builder b)
 
 }
+
 Builder ..> Computer
 @enduml
