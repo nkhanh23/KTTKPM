@@ -1,4 +1,4 @@
-package structural.compisite.binary_tree.Folder;
+package structural.compisite.Folder;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
